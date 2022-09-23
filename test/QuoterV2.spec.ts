@@ -274,7 +274,6 @@ describe('QuoterV2', function () {
           10000
         )
 
-        await snapshotGasCost(gasEstimate)
         expect(sqrtPriceX96AfterList.length).to.eq(2)
         expect(sqrtPriceX96AfterList[0]).to.eq('78461846509168490764501028180')
         expect(sqrtPriceX96AfterList[1]).to.eq('80007846861567212939802016351')
@@ -340,7 +339,6 @@ describe('QuoterV2', function () {
           15000
         )
 
-        await snapshotGasCost(gasEstimate)
         expect(initializedTicksCrossedList.length).to.eq(1)
         expect(initializedTicksCrossedList[0]).to.eq(2)
         expect(amountIn).to.eq(15273)
