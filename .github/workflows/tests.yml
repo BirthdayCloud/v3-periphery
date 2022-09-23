@@ -6,6 +6,9 @@ on:
       - main
   pull_request:
 
+env:
+  BIRTHDAY_CLOUD_NPM_TOKEN: ${{ secrets.PKG_NPM_GITHUB_TOKEN }}
+
 jobs:
   unit-tests:
     name: Unit Tests
@@ -16,7 +19,6 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: 18.x
-          registry-url: https://registry.npmjs.org
 
       - id: yarn-cache
         run: echo "::set-output name=dir::$(yarn cache dir)"
