@@ -1,5 +1,5 @@
 // Copied from: https://github.com/Uniswap/v2-core/blob/master/contracts/interfaces/IUniswapV2Pair.sol
-pragma solidity >=0.5.0;
+pragma solidity =0.7.6;
 
 interface IUniswapV2Pair {
     event Approval(address indexed owner, address indexed spender, uint value);
