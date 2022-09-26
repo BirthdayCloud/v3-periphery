@@ -30,7 +30,7 @@ jobs:
       - name: Install dependencies
         run: yarn install --frozen-lockfile
         env:
-          BIRTHDAY_CLOUD_NPM_TOKEN: ${{ secrets.PKG_NPM_GITHUB_TOKEN }}
+          BIRTHDAY_CLOUD_NPM_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       # This is required separately from yarn test because it generates the typechain definitions
       - name: Compile

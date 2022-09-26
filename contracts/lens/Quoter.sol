@@ -2,10 +2,10 @@
 pragma solidity =0.7.6;
 pragma abicoder v2;
 
-import '@birthdaycloud/uniswap-v3-core/contracts/libraries/SafeCast.sol';
-import '@birthdaycloud/uniswap-v3-core/contracts/libraries/TickMath.sol';
-import '@birthdaycloud/uniswap-v3-core/contracts/interfaces/IUniswapV3Pool.sol';
-import '@birthdaycloud/uniswap-v3-core/contracts/interfaces/callback/IUniswapV3SwapCallback.sol';
+import '@birthdayresearch/uniswap-v3-core/contracts/libraries/SafeCast.sol';
+import '@birthdayresearch/uniswap-v3-core/contracts/libraries/TickMath.sol';
+import '@birthdayresearch/uniswap-v3-core/contracts/interfaces/IUniswapV3Pool.sol';
+import '@birthdayresearch/uniswap-v3-core/contracts/interfaces/callback/IUniswapV3SwapCallback.sol';
 
 import '../interfaces/IQuoter.sol';
 import '../base/PeripheryImmutableState.sol';

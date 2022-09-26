@@ -1,9 +1,9 @@
 // SPDX-License-Identifier: UNLICENSED
 pragma solidity =0.7.6;
 
-import '@birthdaycloud/uniswap-v3-core/contracts/interfaces/callback/IUniswapV3SwapCallback.sol';
-import '@birthdaycloud/uniswap-v3-core/contracts/libraries/SafeCast.sol';
-import '@birthdaycloud/uniswap-v3-core/contracts/interfaces/IUniswapV3Pool.sol';
+import '@birthdayresearch/uniswap-v3-core/contracts/interfaces/callback/IUniswapV3SwapCallback.sol';
+import '@birthdayresearch/uniswap-v3-core/contracts/libraries/SafeCast.sol';
+import '@birthdayresearch/uniswap-v3-core/contracts/interfaces/IUniswapV3Pool.sol';
 import '@openzeppelin3.4.2/contracts/token/ERC20/IERC20.sol';
 
 contract TestUniswapV3Callee is IUniswapV3SwapCallback {

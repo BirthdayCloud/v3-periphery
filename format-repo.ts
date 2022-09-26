@@ -3,7 +3,7 @@ import {resolve, join} from 'path'
 
 const SOLIDITY_COMPILER_VERSION = "=0.7.6"
 const OPEN_ZEP_PACKAGE = '@openzeppelin3.4.2'
-const V3_CORE_PACKAGE = '@birthdaycloud/uniswap-v3-core'
+const V3_CORE_PACKAGE = '@birthdayresearch/uniswap-v3-core'
 // Where to start walking from
 const START_PATH = resolve('./')
 // Directories to ignore. This is a naive search, similar to a **directory** glob
@@ -57,8 +57,8 @@ function handleSolidityFile(filePath: string) {
       changeMade = true
     }
 
-    if (line.includes('@uniswap/v3-core')) {
-      fileLinesCopy[i] = line.replace('@uniswap/v3-core', V3_CORE_PACKAGE)
+    if (line.includes('@birthdaycloud/uniswap-v3-core')) {
+      fileLinesCopy[i] = line.replace('@birthdaycloud/uniswap-v3-core', V3_CORE_PACKAGE)
       changeMade = true
     }
 
@@ -92,8 +92,8 @@ function handleTSFile(filePath: string) {
     // Longer imports are formatted, and the line which includes the package looks like
     // } from '@some-package-name'
     if (line.startsWith('import') || line.startsWith('}')) {
-      if (line.includes('@uniswap/v3-core')) {
-        fileLinesCopy[i] = line.replace('@uniswap/v3-core', V3_CORE_PACKAGE)
+      if (line.includes('@birthdaycloud/uniswap-v3-core')) {
+        fileLinesCopy[i] = line.replace('@birthdaycloud/uniswap-v3-core', V3_CORE_PACKAGE)
         changeMade = true
       }
 
