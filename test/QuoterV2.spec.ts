@@ -521,7 +521,6 @@ describe('QuoterV2', function () {
           9745
         )
 
-        await snapshotGasCost(gasEstimate)
         expect(sqrtPriceX96AfterList.length).to.eq(2)
         expect(sqrtPriceX96AfterList[0]).to.eq('80007838904387594703933785072')
         expect(sqrtPriceX96AfterList[1]).to.eq('78461888503179331029803316753')
