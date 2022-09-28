@@ -16,7 +16,6 @@ import {
 import completeFixture from './shared/completeFixture'
 import { FeeAmount, MaxUint128, TICK_SPACINGS } from './shared/constants'
 import { encodePriceSqrt } from './shared/encodePriceSqrt'
-import snapshotGasCost from './shared/snapshotGasCost'
 
 import { expect } from './shared/expect'
 import { getMaxTick, getMinTick } from './shared/ticks'
@@ -162,7 +161,6 @@ describe('PairFlash test', () => {
         fee2: FeeAmount.LOW,
         fee3: FeeAmount.HIGH,
       }
-      await snapshotGasCost(flash.initFlash(flashParams))
     })
   })
 })

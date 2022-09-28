@@ -191,15 +191,6 @@ describe('TickLens', () => {
       expect(max.liquidityGross).to.be.eq(fullRangeLiquidity)
     })
 
-    it('gas for single populated tick', async () => {
-      await snapshotGasCost(
-        tickLens.getGasCostOfGetPopulatedTicksInWord(
-          poolAddress,
-          getTickBitmapIndex(getMaxTick(TICK_SPACINGS[FeeAmount.MEDIUM]), TICK_SPACINGS[FeeAmount.MEDIUM])
-        )
-      )
-    })
-
     it('fully populated ticks', async () => {
       // fully populate a word
       for (let i = 0; i < 128; i++) {
@@ -212,12 +203,6 @@ describe('TickLens', () => {
       )
       expect(ticks.length).to.be.eq(256)
 
-      await snapshotGasCost(
-        tickLens.getGasCostOfGetPopulatedTicksInWord(
-          poolAddress,
-          getTickBitmapIndex(0, TICK_SPACINGS[FeeAmount.MEDIUM])
-        )
-      )
     }).timeout(300_000)
   })
 })

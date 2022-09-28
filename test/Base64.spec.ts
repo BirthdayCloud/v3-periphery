@@ -3,7 +3,6 @@ import { base64Encode } from './shared/base64'
 import { expect } from './shared/expect'
 import { Base64Test } from '../typechain'
 import { randomBytes } from 'crypto'
-import snapshotGasCost from './shared/snapshotGasCost'
 
 function stringToHex(str: string): string {
   return `0x${Buffer.from(str, 'utf8').toString('hex')}`
@@ -39,10 +38,6 @@ describe('Base64', () => {
       it(`works for "${example}"`, async () => {
         expect(await base64.encode(stringToHex(example))).to.eq(base64Encode(example))
       })
-
-      it(`gas cost of encode(${example})`, async () => {
-        await snapshotGasCost(base64.getGasCostOfEncode(stringToHex(example)))
-      })
     }
 
     describe('max size string (24kB)', () => {
@@ -55,9 +50,6 @@ describe('Base64', () => {
       })
       it('correctness', async () => {
         expect(await base64.encode(stringToHex(str))).to.eq(base64Encode(str))
-      })
-      it('gas cost', async () => {
-        await snapshotGasCost(base64.getGasCostOfEncode(stringToHex(str)))
       })
     })
 

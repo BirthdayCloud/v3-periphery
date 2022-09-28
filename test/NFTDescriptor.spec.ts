@@ -5,7 +5,6 @@ import { expect } from './shared/expect'
 import { TestERC20Metadata, NFTDescriptorTest } from '../typechain'
 import { Fixture } from 'ethereum-waffle'
 import { FeeAmount, TICK_SPACINGS } from './shared/constants'
-import snapshotGasCost from './shared/snapshotGasCost'
 import { formatSqrtRatioX96 } from './shared/formatSqrtRatioX96'
 import { getMaxTick, getMinTick } from './shared/ticks'
 import { randomBytes } from 'crypto'
@@ -303,27 +302,6 @@ describe('NFTDescriptor', () => {
         expect(json.description).to.equal(tokenMetadata.description)
         expect(json.name).to.equal(tokenMetadata.name)
       })
-    })
-
-    it('gas', async () => {
-      await snapshotGasCost(
-        nftDescriptor.getGasCostOfConstructTokenURI({
-          tokenId,
-          baseTokenAddress,
-          quoteTokenAddress,
-          baseTokenSymbol,
-          quoteTokenSymbol,
-          baseTokenDecimals,
-          quoteTokenDecimals,
-          flipRatio,
-          tickLower,
-          tickUpper,
-          tickCurrent,
-          tickSpacing,
-          fee,
-          poolAddress,
-        })
-      )
     })
 
     it('snapshot matches', async () => {

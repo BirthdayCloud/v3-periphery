@@ -3,7 +3,6 @@ import { ethers, waffle } from 'hardhat'
 import { BigNumber, BigNumberish, constants, ContractFactory, Contract } from 'ethers'
 import { OracleTest, TestERC20 } from '../typechain'
 import { expandTo18Decimals } from './shared/expandTo18Decimals'
-import snapshotGasCost from './shared/snapshotGasCost'
 
 describe('OracleLibrary', () => {
   let loadFixture: ReturnType<typeof waffle.createFixtureLoader>
@@ -183,17 +182,6 @@ describe('OracleLibrary', () => {
         tokens[0].address
       )
       expect(quoteAmount).to.equal(BigNumber.from('1'))
-    })
-
-    it('gas test', async () => {
-      await snapshotGasCost(
-        oracle.getGasCostOfGetQuoteAtTick(
-          BigNumber.from(10),
-          expandTo18Decimals(1),
-          tokens[0].address,
-          tokens[1].address
-        )
-      )
     })
   })
 

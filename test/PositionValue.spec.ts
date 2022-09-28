@@ -5,7 +5,6 @@ import {
   PositionValueTest,
   SwapRouter,
   MockTimeNonfungiblePositionManager,
-  IUniswapV3Pool,
   TestERC20,
   IUniswapV3Factory,
 } from '../typechain'
@@ -16,7 +15,6 @@ import { expandTo18Decimals } from './shared/expandTo18Decimals'
 import { encodePath } from './shared/path'
 import { computePoolAddress } from './shared/computePoolAddress'
 import completeFixture from './shared/completeFixture'
-import snapshotGasCost from './shared/snapshotGasCost'
 
 import { expect } from './shared/expect'
 
@@ -130,10 +128,6 @@ describe('PositionValue', async () => {
 
       expect(total[0]).to.equal(principal[0].add(fees[0]))
       expect(total[1]).to.equal(principal[1].add(fees[1]))
-    })
-
-    it('gas', async () => {
-      await snapshotGasCost(positionValue.totalGas(nft.address, 1, sqrtRatioX96))
     })
   })
 
@@ -259,8 +253,6 @@ describe('PositionValue', async () => {
         amount1Min: 0,
         deadline: 10,
       })
-
-      await snapshotGasCost(positionValue.principalGas(nft.address, 1, sqrtRatioX96))
     })
   })
 
@@ -370,10 +362,6 @@ describe('PositionValue', async () => {
         expect(feeAmounts[0]).to.equal(feesFromCollect[0])
         expect(feeAmounts[1]).to.equal(feesFromCollect[1])
       })
-
-      it('gas', async () => {
-        await snapshotGasCost(positionValue.feesGas(nft.address, tokenId))
-      })
     })
 
     describe('when price is below the position range', async () => {
@@ -427,9 +415,6 @@ describe('PositionValue', async () => {
         expect(feeAmounts[1]).to.equal(feesFromCollect[1])
       })
 
-      it('gas', async () => {
-        await snapshotGasCost(positionValue.feesGas(nft.address, tokenId))
-      })
     })
 
     describe('when price is above the position range', async () => {
@@ -482,9 +467,6 @@ describe('PositionValue', async () => {
         expect(feeAmounts[1]).to.equal(feesFromCollect[1])
       })
 
-      it('gas', async () => {
-        await snapshotGasCost(positionValue.feesGas(nft.address, tokenId))
-      })
     })
   })
 })

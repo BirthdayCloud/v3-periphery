@@ -91,9 +91,6 @@ describe('SwapRouter', function () {
     expect(balance.eq(0)).to.be.eq(true)
   })
 
-  it('bytecode size', async () => {
-    expect(((await router.provider.getCode(router.address)).length - 2) / 2).to.matchSnapshot()
-  })
 
   describe('swaps', () => {
     const liquidity = 1000000
