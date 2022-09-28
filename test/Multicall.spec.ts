@@ -3,8 +3,6 @@ import { ethers, waffle } from 'hardhat'
 import { TestMulticall } from '../typechain/TestMulticall'
 import { expect } from './shared/expect'
 
-import snapshotGasCost from './shared/snapshotGasCost'
-
 describe('Multicall', async () => {
   let wallets: Wallet[]
 
@@ -53,13 +51,5 @@ describe('Multicall', async () => {
     it('msg.sender', async () => {
       expect(await multicall.returnSender()).to.eq(wallets[0].address)
     })
-  })
-
-  it('gas cost of pay w/o multicall', async () => {
-    await snapshotGasCost(multicall.pays({ value: 3 }))
-  })
-
-  it('gas cost of pay w/ multicall', async () => {
-    await snapshotGasCost(multicall.multicall([multicall.interface.encodeFunctionData('pays')], { value: 3 }))
   })
 })

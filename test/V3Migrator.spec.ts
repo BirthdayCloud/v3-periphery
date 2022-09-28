@@ -413,34 +413,5 @@ describe('V3Migrator', () => {
         expect(await weth9.balanceOf(poolAddress)).to.be.eq(8999)
       }
     })
-
-    it('gas', async () => {
-      const [token0, token1] = sortedTokens(weth9, token)
-      await migrator.createAndInitializePoolIfNecessary(
-        token0.address,
-        token1.address,
-        FeeAmount.MEDIUM,
-        encodePriceSqrt(1, 1)
-      )
-
-      await pair.approve(migrator.address, expectedLiquidity)
-      await snapshotGasCost(
-        migrator.migrate({
-          pair: pair.address,
-          liquidityToMigrate: expectedLiquidity,
-          percentageToMigrate: 100,
-          token0: tokenLower ? token.address : weth9.address,
-          token1: tokenLower ? weth9.address : token.address,
-          fee: FeeAmount.MEDIUM,
-          tickLower: getMinTick(FeeAmount.MEDIUM),
-          tickUpper: getMaxTick(FeeAmount.MEDIUM),
-          amount0Min: 9000,
-          amount1Min: 9000,
-          recipient: wallet.address,
-          deadline: 1,
-          refundAsETH: false,
-        })
-      )
-    })
   })
 })
