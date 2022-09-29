@@ -1,10 +1,10 @@
 // SPDX-License-Identifier: GPL-2.0-or-later
 pragma solidity =0.7.6;
 
-import '@birthdayresearch/uniswap-v3-core/contracts/interfaces/IUniswapV3Pool.sol';
-import '@birthdayresearch/uniswap-v3-core/contracts/libraries/FixedPoint128.sol';
-import '@birthdayresearch/uniswap-v3-core/contracts/libraries/TickMath.sol';
-import '@birthdayresearch/uniswap-v3-core/contracts/libraries/Tick.sol';
+import '@birthdayresearchforks/uniswap-v3-core/contracts/interfaces/IUniswapV3Pool.sol';
+import '@birthdayresearchforks/uniswap-v3-core/contracts/libraries/FixedPoint128.sol';
+import '@birthdayresearchforks/uniswap-v3-core/contracts/libraries/TickMath.sol';
+import '@birthdayresearchforks/uniswap-v3-core/contracts/libraries/Tick.sol';
 import '../interfaces/INonfungiblePositionManager.sol';
 import './LiquidityAmounts.sol';
 import './PoolAddress.sol';

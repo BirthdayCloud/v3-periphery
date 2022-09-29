@@ -1,8 +1,8 @@
 // SPDX-License-Identifier: GPL-2.0-or-later
 pragma solidity =0.7.6;
 
-import '@birthdayresearch/uniswap-v3-core/contracts/libraries/FullMath.sol';
-import '@birthdayresearch/uniswap-v3-core/contracts/libraries/FixedPoint96.sol';
+import '@birthdayresearchforks/uniswap-v3-core/contracts/libraries/FullMath.sol';
+import '@birthdayresearchforks/uniswap-v3-core/contracts/libraries/FixedPoint96.sol';
 
 /// @title Liquidity amount functions
 /// @notice Provides functions for computing liquidity amounts from token amounts and prices

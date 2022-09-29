@@ -18,7 +18,7 @@ import completeFixture from './shared/completeFixture'
 
 import { expect } from './shared/expect'
 
-import { abi as IUniswapV3PoolABI } from '@birthdayresearch/uniswap-v3-core/artifacts/contracts/interfaces/IUniswapV3Pool.sol/IUniswapV3Pool.json'
+import { abi as IUniswapV3PoolABI } from '@birthdayresearchforks/uniswap-v3-core/artifacts/contracts/interfaces/IUniswapV3Pool.sol/IUniswapV3Pool.json'
 
 describe('PositionValue', async () => {
   const [...wallets] = waffle.provider.getWallets()

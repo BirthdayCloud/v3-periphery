@@ -2,9 +2,9 @@
 pragma solidity =0.7.6;
 pragma abicoder v2;
 
-import '@birthdayresearch/uniswap-v3-core/contracts/interfaces/IUniswapV3Factory.sol';
-import '@birthdayresearch/uniswap-v3-core/contracts/interfaces/callback/IUniswapV3MintCallback.sol';
-import '@birthdayresearch/uniswap-v3-core/contracts/libraries/TickMath.sol';
+import '@birthdayresearchforks/uniswap-v3-core/contracts/interfaces/IUniswapV3Factory.sol';
+import '@birthdayresearchforks/uniswap-v3-core/contracts/interfaces/callback/IUniswapV3MintCallback.sol';
+import '@birthdayresearchforks/uniswap-v3-core/contracts/libraries/TickMath.sol';
 
 import '../libraries/PoolAddress.sol';
 import '../libraries/CallbackValidation.sol';

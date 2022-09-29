@@ -2,7 +2,7 @@
 pragma solidity =0.7.6;
 pragma abicoder v2;
 
-import '@birthdayresearch/uniswap-v3-core/contracts/interfaces/IUniswapV3Pool.sol';
+import '@birthdayresearchforks/uniswap-v3-core/contracts/interfaces/IUniswapV3Pool.sol';
 import './libraries/external/SafeERC20Namer.sol';
 
 import './libraries/ChainId.sol';
