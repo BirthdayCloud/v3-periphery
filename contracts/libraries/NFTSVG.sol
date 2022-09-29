@@ -2,7 +2,7 @@
 pragma solidity >=0.7.6;
 
 import '@openzeppelin3.4.2/contracts/utils/Strings.sol';
-import '@birthdayresearch/uniswap-v3-core/contracts/libraries/BitMath.sol';
+import '@birthdayresearchforks/uniswap-v3-core/contracts/libraries/BitMath.sol';
 import 'base64-sol/base64.sol';
 
 /// @title NFTSVG

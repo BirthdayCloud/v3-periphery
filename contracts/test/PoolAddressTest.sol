@@ -2,7 +2,7 @@
 pragma solidity =0.7.6;
 
 import '../libraries/PoolAddress.sol';
-import { UniswapV3Pool } from '@birthdayresearch/uniswap-v3-core/contracts/UniswapV3Pool.sol';
+import { UniswapV3Pool } from '@birthdayresearchforks/uniswap-v3-core/contracts/UniswapV3Pool.sol';
 
 contract PoolAddressTest {
     function POOL_INIT_CODE_HASH() external pure returns (bytes32) {

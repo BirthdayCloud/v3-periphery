@@ -2,10 +2,10 @@
 pragma solidity =0.7.6;
 pragma abicoder v2;
 
-import '@birthdayresearch/uniswap-v3-core/contracts/interfaces/IUniswapV3Pool.sol';
-import '@birthdayresearch/uniswap-v3-core/contracts/libraries/TickMath.sol';
-import '@birthdayresearch/uniswap-v3-core/contracts/libraries/BitMath.sol';
-import '@birthdayresearch/uniswap-v3-core/contracts/libraries/FullMath.sol';
+import '@birthdayresearchforks/uniswap-v3-core/contracts/interfaces/IUniswapV3Pool.sol';
+import '@birthdayresearchforks/uniswap-v3-core/contracts/libraries/TickMath.sol';
+import '@birthdayresearchforks/uniswap-v3-core/contracts/libraries/BitMath.sol';
+import '@birthdayresearchforks/uniswap-v3-core/contracts/libraries/FullMath.sol';
 import '@openzeppelin3.4.2/contracts/utils/Strings.sol';
 import '@openzeppelin3.4.2/contracts/math/SafeMath.sol';
 import '@openzeppelin3.4.2/contracts/math/SignedSafeMath.sol';

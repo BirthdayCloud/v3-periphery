@@ -1,12 +1,12 @@
 // SPDX-License-Identifier: GPL-2.0-or-later
 pragma solidity =0.7.6;
 
-import '@birthdayresearch/uniswap-v3-core/contracts/libraries/FullMath.sol';
-import '@birthdayresearch/uniswap-v3-core/contracts/libraries/UnsafeMath.sol';
-import '@birthdayresearch/uniswap-v3-core/contracts/libraries/FixedPoint96.sol';
+import '@birthdayresearchforks/uniswap-v3-core/contracts/libraries/FullMath.sol';
+import '@birthdayresearchforks/uniswap-v3-core/contracts/libraries/UnsafeMath.sol';
+import '@birthdayresearchforks/uniswap-v3-core/contracts/libraries/FixedPoint96.sol';
 
 /// @title Functions based on Q64.96 sqrt price and liquidity
-/// @notice Exposes two functions from @birthdayresearch/uniswap-v3-core SqrtPriceMath
+/// @notice Exposes two functions from @birthdayresearchforks/uniswap-v3-core SqrtPriceMath
 /// that use square root of price as a Q64.96 and liquidity to compute deltas
 library SqrtPriceMathPartial {
     /// @notice Gets the amount0 delta between two prices
